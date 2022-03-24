@@ -1,0 +1,24 @@
+*{
+    background: url("./image/carotte.jpg");
+}
+
+.myButton {
+    color: rgb(22, 73, 35); 
+    font-size: 17px; 
+    line-height: 17px; 
+    padding: 7px; 
+    border-radius: 16px; 
+    font-family: Georgia, serif; 
+    font-weight: normal; 
+    text-decoration: none; 
+    font-style: normal; 
+    font-variant: normal; 
+    text-transform: none; 
+    background-image: linear-gradient(to right, rgb(206, 213, 218) 0%, #47d87f 50%, rgb(30, 111, 165) 100%); 
+    box-shadow: rgb(0, 0, 0) 5px 5px 32px 0px; 
+    border: 2px solid rgb(28, 110, 164); 
+    display: inline-block;}
+    .myButton:hover {
+    background: #b0e057; }
+    .myButton:active {
+    background: #09f172; }

@@ -1,0 +1,37 @@
+li ul, li em  { /* closed */
+    position:absolute;
+    left:-9999px;
+  }
+  li:focus ul, li:active ul {/* opened*/
+    left:-1em;
+    right:-1em;
+  }
+  li:focus em,li:active em {/* closes (li looses focus)*/
+    right:0em;
+    left:auto;
+  }
+  
+  ul {
+      margin:0;
+      padding:0;
+    }
+  ul li {
+    position:relative;
+    display:inline-block;
+    margin:0 1em;
+    padding:0 0.5em;
+    background:white;
+  }
+  
+  li li {
+      display:block;
+    }
+
+  li em {
+    padding:0 0.45em;
+    background:lightgray;
+    border-radius:5px;
+    height:1em;
+    line-height:0.7em;
+    display:inline-block;
+  }
