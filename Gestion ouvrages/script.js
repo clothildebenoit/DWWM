@@ -1,5 +1,8 @@
+let booksList = new Array()
+let authorsList = new Array();
+let categoriesList = new Array();
+let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 
-var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 function ChargeInfosJson() {
     /* Allons chercher un fichier JSON */
     fetch('books.json')
@@ -12,6 +15,12 @@ function ChargeInfosJson() {
         }
         );
 }
+
+function ChargeByAuthor() {
+    
+}
+
+
 function CreateDivs(data) {
 
     const preview = document.getElementsByClassName("preview")[0];
