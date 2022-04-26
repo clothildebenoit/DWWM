@@ -56,7 +56,7 @@ function CreateDivs(data) {
 
 
         listBook.innerHTML =
-            '<img classe="image" src="' + image + '"/>'
+            '<img class="image" src="' + image + '"/>'
             + '<h1 class="titre">' + data[x].title + '</h1>'
             + '<h2 class="isbn">' + "isbn: " + data[x].isbn + '</h2>'
             + '<h3 class="date">' + "date de parution: " + new Date(data[x].publishedDate.dt_txt).toLocaleDateString("fr-FR", options) + '</h3>'
