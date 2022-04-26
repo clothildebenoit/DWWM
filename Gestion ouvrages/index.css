@@ -1,0 +1,42 @@
+
+.preview{
+    height:auto;     
+    width: 100%;     
+    display: flex;     
+    flex-wrap: wrap;     
+    justify-content: center;     
+    background-color: rgb(226, 115, 183);
+}
+.image{
+    max-height: 100px;
+    max-width: 100px;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    margin: 1vw;
+    padding: 1px;
+    height: 35vh;
+    width: 10vw;
+    background-color: rgb(247, 247, 247);
+    box-shadow: 10px 5px 10px 0 rgba(0,0,0,0.2);
+    border-radius: 25px;
+    overflow-y:auto;
+}
+.titre{
+    max-height: 10%;
+    min-height: auto;
+    font-size: 1.2em;
+
+}
+h2{
+    max-height: 5%;
+    min-height: auto;
+    font-size: 0.9em; 
+}
+
+h3{
+    max-height: 5%;
+    min-height: auto;
+    font-size: 0.9em; 
+}
