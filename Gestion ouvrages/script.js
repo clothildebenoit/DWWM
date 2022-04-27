@@ -11,14 +11,69 @@ function ChargeInfosJson() {
         })
         .then(data => { /*Une fois le fichier converti*/
             console.log(data); /*Appelons notre fonction */
-            CreateDivs(data);
+            createList(data);
         }
         );
 }
 
-function ChargeByAuthor() {
-    
+//fonction qui créé les listes déroulantes
+var createList = function (data) {
+
+    for (var x = 0; x < data.length; x++) {
+  
+      var book = data[x];
+      booksList.push(book);
+  
+      for (var y = 0; y < book.authors.length; y++) {
+        let author = book.authors[y];
+  
+        if (authorsList.indexOf(author) == -1) {
+          authorsList.push(author);
+        }
+      }
+  
+      for (var y = 0; y < book.categories.length; y++) {
+        let category = book.categories[y];
+  
+        if (categoriesList.indexOf(category) == -1) {
+          categoriesList.push(category);
+        }
+      }
+    }
+    booksList.sort();
+    authorsList.sort();
+    categoriesList.sort();
+  
+    for (var x = 0; x < authorsList.length; x++) {
+      var option = document.createElement("option");
+      option.value = authorsList[x];
+      option.innerText = authorsList[x];
+      document.getElementById("listAuthors").appendChild(option);
+    }
+    for (var x = 0; x < categoriesList.length; x++) {
+      var option = document.createElement("option");
+      option.value = categoriesList[x];
+      option.innerText = categoriesList[x];
+      document.getElementById("listCategories").appendChild(option);
+    }
+    CreateDivs(booksList); /* Appelons notre fonction */
+  
 }
+
+// .......Récupéré la valeur dans le menu déroulant
+        let option = document.getElementById('listAthors');
+        let value = option.value;
+
+// function ChargeByAuthor() {
+//     for (let i = 0; i < authorsList.length; i++) {
+        
+//         if ( == data.author) {
+//             preview.appendChild();
+//         }
+        
+//     }
+// }
+
 
 
 function CreateDivs(data) {
