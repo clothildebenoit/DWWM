@@ -13,7 +13,7 @@ fetch("https://breakingbadapi.com/api/characters", requestOptions)
 
 
 
-// liste perso
+// apperçu de toute les fiches perso
 var createList = function (data) {
     var perso = document.getElementById("preview");
 
@@ -21,12 +21,22 @@ var createList = function (data) {
         var element = document.createElement('card');
         element.setAttribute('class', 'carte')
         console.log(data[i]);
+
+        // // enlever les perso de BetterCallSaul
+        // let noBetterCallSaul;
+        // if ((data[x].category== )) {
+            
+        // }
+
         var element2 = document.createElement('div');
         element2.setAttribute('class', 'back')
-        element2.innerHTML = data[i].name;
+        element2.innerHTML = '<h1>' + data[i].name + '</h1>';
+        // + '<h2>' + "Surnom : " + data[i].nickname + '</h2>';
+        // + '<p>' + "Métier/Activité : " + data[i].occupation + '</p>';
+        // + '<h3>' + "Acteur/Actrice : " + data[i].portrayed + '</h3>';
+
         var element3 = document.createElement('img');
         element3.setAttribute('class', 'front')
-
         element3.src = data[i].img;
 
 
@@ -35,7 +45,29 @@ var createList = function (data) {
         perso.appendChild(element);
     }
 }
+// création de la liste par nom
+//  var createListNom = function (data) {
+//      for (let y = 0; y < data.nom.length; y++) {
+         
+         
+//      }
+//  }
 
+// // fonction recherche
+// function searchbar() {
+//     let input = document.getElementById('searchbar').value
+//     input=input.toLowerCase();
+//     let x = document.getElementsByClassName('');
+      
+//     for (i = 0; i < x.length; i++) { 
+//         if (!x[i].innerHTML.toLowerCase().includes(input)) {
+//             x[i].style.display="none";
+//         }
+//         else {
+//             x[i].style.display="list-item";                 
+//         }
+//     }
+// }
 // function flip(event){
 //     let retourner = event.currentTarget;
 //     if (retourner.className === "carte"){
