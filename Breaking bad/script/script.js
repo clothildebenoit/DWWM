@@ -13,7 +13,7 @@ fetch("https://breakingbadapi.com/api/characters", requestOptions)
 
 
 
-// apperçu de toute les fiches perso
+// liste perso
 var createList = function (data) {
     var perso = document.getElementById("preview");
 
@@ -21,22 +21,16 @@ var createList = function (data) {
         var element = document.createElement('card');
         element.setAttribute('class', 'carte')
         console.log(data[i]);
-
-        // // enlever les perso de BetterCallSaul
-        // let noBetterCallSaul;
-        // if ((data[x].category== )) {
-            
-        // }
-
         var element2 = document.createElement('div');
         element2.setAttribute('class', 'back')
-        element2.innerHTML = '<h1>' + data[i].name + '</h1>';
-        // + '<h2>' + "Surnom : " + data[i].nickname + '</h2>';
-        // + '<p>' + "Métier/Activité : " + data[i].occupation + '</p>';
-        // + '<h3>' + "Acteur/Actrice : " + data[i].portrayed + '</h3>';
+        element2.innerHTML = '<h1>' + data[i].name + '</h1>'
+        + '<h2>' + "Surnom : " + data[i].nickname + '</h2>'
+        + '<p>' + "Métier/Activité : " + "<br>" + data[i].occupation + '</p>'
+        + '<h3>' + "Acteur/Actrice : " + data[i].portrayed + '</h3>';
 
         var element3 = document.createElement('img');
         element3.setAttribute('class', 'front')
+
         element3.src = data[i].img;
 
 
@@ -45,15 +39,25 @@ var createList = function (data) {
         perso.appendChild(element);
     }
 }
-// création de la liste par nom
-//  var createListNom = function (data) {
-//      for (let y = 0; y < data.nom.length; y++) {
-         
-         
-//      }
-//  }
 
-// // fonction recherche
+const cards = document.getElementByClass(".carte");
+cards.addEventListener("click",flipCard)
+function flipCard(){
+// console.log("j'ai cliké!");
+// console.log(this);
+// cards.forEach(card=>card.addEventListener('click', flipCard()));
+cards.classList.toggle("flipCard");
+}
+
+
+
+// // .....enlever les perso de BetterCallSaul
+        // let noBetterCallSaul;
+        // if (data[x].category!=="Breaking Bad") {
+            
+        // }
+
+   // // .....fonction recherche
 // function searchbar() {
 //     let input = document.getElementById('searchbar').value
 //     input=input.toLowerCase();
@@ -68,6 +72,7 @@ var createList = function (data) {
 //         }
 //     }
 // }
+        
 // function flip(event){
 //     let retourner = event.currentTarget;
 //     if (retourner.className === "carte"){

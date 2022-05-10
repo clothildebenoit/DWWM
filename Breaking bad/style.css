@@ -32,19 +32,29 @@ input {
     margin-right: auto;
 }
 
-img{
+
+.carte{
     width: 250px;
     height: 300px;
     padding: 5px;
 }
 
-/* .front, .back {
+/* img=front */
+img{
+    width: 250px;
+    height: 300px;
+    padding: 5px;
+    position: relative;
+}
+
+.back {
     position: absolute;
     backface-visibility: hidden;
+    width: 250px;
     height: 300px;
+    padding: 5px;
+    /* background: green; */
 }
-.front {
-    width: 200px;
+.flipCard{
     transform: rotateY(180deg);
-} */
-
+}
