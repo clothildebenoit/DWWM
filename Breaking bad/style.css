@@ -37,3 +37,14 @@ img{
     height: 300px;
     padding: 5px;
 }
+
+/* .front, .back {
+    position: absolute;
+    backface-visibility: hidden;
+    height: 300px;
+}
+.front {
+    width: 200px;
+    transform: rotateY(180deg);
+} */
+

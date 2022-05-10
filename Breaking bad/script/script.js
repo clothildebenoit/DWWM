@@ -47,6 +47,23 @@ var createList = function (data) {
 //         }
 //     }
 // }
+
+
+
+// ..........hide click en Jquery
+// $(document).ready(function(){
+
+//     let getSpoilers = $('.spoiler');
+
+//     getSpoilers.hide();
+//     getSpoilers.after('<button>Spoiler</button>');
+//     getSpoilers.next().click(function(){
+//         $(this).prev().fadeIn();
+//         $(this).hide();
+//     });
+
+// });
+
 // $('.carte').click(function(){
 //     $(this).toggleClass('flipped');
 //   });
