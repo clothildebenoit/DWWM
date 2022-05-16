@@ -1,0 +1,94 @@
+body {
+  font: 1em sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+form {
+  max-width: 300px;
+  margin: 0;
+  padding: 0 5px;
+}
+
+p>label {
+  display: block;
+}
+
+legend {
+  background-color: #000;
+  color: #fff;
+  padding: 3px 6px;
+}
+
+input[type=text],
+input[type=email],
+input[type=number],
+textarea,
+fieldset {
+  /* requis pour composer de manière appropriée les éléments
+     de formulaire sur les navigateurs fondés sur WebKit */
+  -webkit-appearance: none;
+
+  width: 100%;
+  border: 1px solid #333;
+  margin: 0;
+
+  font-family: inherit;
+  font-size: 90%;
+
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+input:invalid {
+  box-shadow: 0 0 5px 1px red;
+}
+
+input:focus:invalid {
+  outline: none;
+}
+
+#erreur {
+  color: red;
+}
+
+.cart-item {
+  display: flex;
+  align-items: flex-start;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #D7D7F9;
+}
+/* .cart-item:last-child {
+  border-bottom: 5px solid #D7D7F9;
+}
+.cart-item img {
+  width: 65px;
+}
+.cart-item .g-price {
+  font-size: 24px;
+}
+
+.cart-item-dets {
+  margin-left: 15px;
+  width: 100%;
+}
+
+.cart-item-heading {
+  margin: 10px 0;
+}
+
+.cart-math-item {
+  margin: 5px 0;
+  font-weight: 700;
+}
+.cart-math-item span {
+  display: inline-block;
+  text-align: right;
+}
+.cart-math-item .cart-math-header {
+  width: 50%;
+}
+.cart-math-item .g-price {
+  width: 40%;
+} */
