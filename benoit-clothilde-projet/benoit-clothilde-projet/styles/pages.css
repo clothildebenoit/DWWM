@@ -1,0 +1,26 @@
+* {
+    font-family: fantasy;
+    color: bisque !important;
+    font-weight: lighter;
+    font-size: large;
+}
+
+.présentation {
+    text-align: center;
+    margin: 40px;
+}
+
+h2 {
+    font-size: x-large;
+    padding: 40px;
+}
+.table-bordered{
+    padding: 40px;
+    margin: 40px;
+    border: 2px solid bisque;
+}
+.clearfix{
+    padding: 40px;
+    margin: 40px;
+    text-align: justify;
+}

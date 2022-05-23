@@ -1,0 +1,45 @@
+.navbar {
+    background-image: url(/images/WorldMapSD_en.webp);
+    padding: 5PX;
+    border: 2px;
+    margin: 10px;
+    font-family: fantasy;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.présentation {
+    text-align: center;
+    margin: 40px;
+}
+
+.container {
+    padding: 10px;
+    margin: 50px;
+
+}
+.row{
+    margin: 40px;
+}
+h2 {
+    color: bisque !important;
+    font-weight: lighter;
+    font-family: fantasy;
+}
+
+h3 {
+    color: bisque !important;
+    font-weight: lighter;
+    font-family: fantasy;
+}
+
+h5 {
+    color: bisque !important;
+    font-weight: lighter;
+    font-family: fantasy;
+}
+ p{
+    color: bisque !important;
+    font-weight: lighter;
+    font-family: fantasy;  
+ }

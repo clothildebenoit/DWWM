@@ -1,0 +1,2 @@
+Il s'agit d'une archive HTML partielle du site WordPress d'origine.
+Vous pouvez afficher un listing produit via la page gamme > sommeil-reparateur > index.html ; les produits sont dans "produit" et le panier dans "panier".

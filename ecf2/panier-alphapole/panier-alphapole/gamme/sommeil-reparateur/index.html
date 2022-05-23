@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="fr-FR">
+
+<head>
+    <meta charset="utf-8">
+    <title>Sommeil - Alphapole</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../wp-content/themes/alphapole/style3cc5.css?v=1.6">
+    <link rel="icon" type="image/png" href="../../wp-content/themes/alphapole/img/favicon.png">
+    <link rel="icon" type="image/png" href="../../wp-content/themes/alphapole/img/favicon.ico">
+
+    <script defer src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script defer src="../../wp-content/themes/alphapole/js/main.js"></script>
+</head>
+<body>
+    <header class="container">
+        <nav class="primary-nav">
+            <div class="leaf"></div>
+            <div class="topbar"></div>
+
+            <ul class="topnav">
+                <li><span class="glyphicon glyphicon-phone-alt"></span> 04 78 25 47 47<span class="hidden-xs"> / Lundi au vendredi de 9h à 18h</span></li>
+                <li class="search-n-cart">
+                    <div class="dropdown">
+                        <div id="cart" class="cart">
+                            <p><span class="glyphicon glyphicon-shopping-cart"></span> <span id="in-cart-items-num">0</span> <span class="caret"></span></p>
+                        </div>
+
+                        <ul id="cart-dropdown" class="cart-dropdown dropdown-menu pull-right">
+                            <li id="empty-cart-msg"><a>Votre panier est vide</a></li>
+                            <li class="divider hidden"></li>
+                            <li class="go-to-cart hidden"><form method="get" action="https://www.alphapole.com/panier/"><button class="btn btn-primary center-block">Voir le panier</button></form></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="search-n-cart hidden-xs">
+                    <form method="get" id="searchform" action="https://www.alphapole.com/">
+                        <div class="searchbox input-group">
+                            <input type="search" name="s" class="form-control" placeholder="Rechercher…">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                            </span>
+                        </div>
+                    </form>
+                    </li>
+                </ul>
+
+                <div class="clearfix"></div>
+
+                <div class="logo">
+                    <a href="../../index.html"><img src="../../wp-content/themes/alphapole/img/logo.png"></a>
+                </div>
+
+                <div id="toggle-navlist" class="toggle-navlist visible-xs-inline">Menu <span class="glyphicon glyphicon-chevron-right"></span></div>
+
+                <ul class="nav nav-justified navlist">
+                    <span class="glyphicon glyphicon-chevron-left visible-xs-inline"></span>
+                    <li id="menu-item-299" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-299"><a href="../../index.html">Accueil</a></li>
+                    <li id="menu-item-298" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-298"><a href="../../aimants-de-magnetotherapie/index.html">Aimants</a></li>
+                    <li id="menu-item-293" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-293"><a href="../../purification-eau-osmose/index.html">Purification d&rsquo;eau</a></li>
+                    <li id="menu-item-295" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-295"><a href="../../temoignages-clients-aimants-de-magnetotherapie-et-osmoseur/index.html">Témoignages</a></li>
+                    <li id="menu-item-297" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-297"><a href="../../etudes-scientifiques-magnetotherapie/index.html">Etudes scientifiques</a></li>
+                    <li id="menu-item-1032" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1032"><a href="../../contact/index.html">Contact</a></li>
+                    <li id="menu-item-1034" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-1034"><a href="../../blog/index.html">Blog</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="container">
+            <div class="row">
+                <div class="hidden-xs hidden-sm col-md-2">
+                    <nav class="secondary-nav">
+                        <ul class="navlist">
+                            <li id="menu-item-312" class="menu-item menu-item-type-taxonomy menu-item-object-gamme menu-item-312"><a href="../soigner-les-douleurs-avec-les-aimants/index.html">Douleurs</a></li>
+                            <li id="menu-item-313" class="menu-item menu-item-type-taxonomy menu-item-object-gamme menu-item-313"><a href="../eau-pure-au-robinet/index.html">Eau pure</a></li>
+                            <li id="menu-item-320" class="menu-item menu-item-type-taxonomy menu-item-object-gamme menu-item-320"><a href="../vitalisation-boissons-et-aliments/index.html">Vitalisation boissons et aliments</a></li>
+                            <li id="menu-item-314" class="menu-item menu-item-type-taxonomy menu-item-object-gamme menu-item-314"><a href="../equilibre-et-energie/index.html">Equilibre et énergie</a></li>
+                            <li id="menu-item-318" class="menu-item menu-item-type-taxonomy menu-item-object-gamme current-menu-item menu-item-318"><a href="index.html">Sommeil</a></li>
+                            <li id="menu-item-316" class="menu-item menu-item-type-taxonomy menu-item-object-gamme menu-item-316"><a href="../peau-et-cheveux/index.html">Peau et cheveux</a></li>
+                            <li id="menu-item-310" class="menu-item menu-item-type-taxonomy menu-item-object-gamme menu-item-310"><a href="../acupuncture-magnetique/index.html">Acupuncture magnétique</a></li>
+                            <li id="menu-item-317" class="menu-item menu-item-type-taxonomy menu-item-object-gamme menu-item-317"><a href="../reflexologie-magnetique/index.html">Réflexologie magnétique</a></li>
+                            <li id="menu-item-319" class="menu-item menu-item-type-taxonomy menu-item-object-gamme menu-item-319"><a href="../sport-et-sportifs/index.html">Sport et sportifs</a></li>
+                            <li id="menu-item-311" class="menu-item menu-item-type-taxonomy menu-item-object-gamme menu-item-311"><a href="../animaux-produits/index.html">Animaux</a></li>
+                            <li id="menu-item-315" class="menu-item menu-item-type-taxonomy menu-item-object-gamme menu-item-315"><a href="../jardiner-avec-les-aimants/index.html">Jardinage</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <main class="col-xs-12 col-md-10">
+		            <h1>Sommeil</h1>
+
+                    <!-- Ici le listing produit avec les attributs qui permettent de renseigner les détails des protuits à ajouter au panier -->
+    		        <section>
+                        <article class="product">
+                            <h1 class="text-center">
+                                <a href="../../produit/piecettes/index.html">Piécettes<br><small>Magnétisme doux, zones sensibles</small></a>
+                            </h1>
+
+                            <a href="../../produit/piecettes/index.html" title="Piécettes" class="text-center">
+                            <img src="../../wp-content/uploads/piecettes-230x188.jpg" class="center-block wp-post-image" alt="piecettes, douceur magnétique"></a>
+
+                            <p class="price text-center">15,00€</p>
+
+                            <!-- Le bouton magique ! -->
+                            <button type="button" class="add-to-cart btn btn-default center-block" data-id="425" data-name="Piécettes" data-price="15,00" data-weight="54" data-url="/produit/piecettes/">Ajouter au panier</button>
+                        </article>
+
+                        <article class="product">
+                            <h1 class="text-center">
+                                <a href="../../produit/galets/index.html">Galets <br><small>La puissance au creux de la main</small></a>
+                            </h1>
+
+                            <a href="../../produit/galets/index.html" title="Galets" class="text-center">
+                            <img src="../../wp-content/uploads/galets-mannequin-209x188.jpg" class="center-block wp-post-image" alt="la magnétothérapie universelle"></a>
+
+                            <p class="price text-center">71,50€</p>
+                            <button type="button" class="add-to-cart btn btn-default center-block" data-id="439" data-name="Galets" data-price="71,50" data-weight="866" data-url="/produit/galets/">Ajouter au panier</button>
+                        </article>
+
+                        <article class="product">
+                            <h1 class="text-center">
+                                <a href="../../produit/aimants-plaques-magnetique/index.html">Plaques <br><small>Rééquilibrer son corps</small></a>
+                            </h1>
+
+                            <a href="../../produit/aimants-plaques-magnetique/index.html" title="Plaques" class="text-center">
+                            <img src="../../wp-content/uploads/plaques-169x188.jpg" class="center-block wp-post-image" alt="rééquilibrage avec les plaques"></a>
+
+                            <p class="price text-center">149,00€</p>
+                            <button type="button" class="add-to-cart btn btn-default center-block" data-id="421" data-name="Plaques" data-price="149,00" data-weight="4000" data-url="/produit/aimants-plaques-magnetique/">Ajouter au panier</button>
+                        </article>
+
+                        <article class="product">
+                            <h1 class="text-center">
+                                <a href="../../produit/kit-nuit-sommeil-paisible/index.html">Kit Nuit Physiomag <br><small>Sommeil paisible et réparateur</small></a>
+                            </h1>
+
+                            <a href="../../produit/kit-nuit-sommeil-paisible/index.html" title="Kit Nuit Physiomag" class="text-center">
+                            <img src="../../wp-content/uploads/dalles-de-kit-nuit-243x188.jpg" class="center-block wp-post-image" alt="Dalles de kit nuit"></a>
+
+                            <p class="price text-center">89,00€ <small>106,00€</small></p>
+                            <button type="button" class="add-to-cart btn btn-default center-block" data-id="345" data-name="Kit Nuit" data-price="89,00" data-weight="6500" data-url="/produit/kit-nuit-sommeil-paisible/">Ajouter au panier</button>
+                        </article>
+
+                        <article class="product">
+                            <h1 class="text-center">
+                                <a href="../../produit/double-kit-nuit/index.html">Double Kit Nuit <br><small>Intense relaxation, pour deux</small></a>
+                            </h1>
+
+                            <a href="../../produit/double-kit-nuit/index.html" title="Double Kit Nuit" class="text-center">
+                            <img src="../../wp-content/uploads/double-kit-nuit-224x188.jpg" class="center-block wp-post-image" alt="double kit nuit"></a>
+
+                            <p class="price text-center">149,00€ <small>178,00€</small></p>
+                            <button type="button" class="add-to-cart btn btn-default center-block" data-id="340" data-name="Double Kit" data-price="149,00" data-weight="12700" data-url="/produit/double-kit-nuit/">Ajouter au panier</button>
+                        </article>
+
+
+                        <article class="product">
+                            <h1 class="text-center">
+                                <a href="../../produit/dalle-supplementaire-kit-nuit/index.html">Dalle de Kit Nuit <br><small>Le Kit Nuit adapté aux grandes tailles</small></a>
+                            </h1>
+
+                            <a href="../../produit/dalle-supplementaire-kit-nuit/index.html" title="Dalle de Kit Nuit" class="text-center">
+                            <img src="../../wp-content/uploads/dalle-sup-244x188.jpg" class="center-block wp-post-image" alt="Dalle pour étendre le kit nuit"></a>
+
+                            <p class="price text-center">29,00€</p>
+                            <button type="button" class="add-to-cart btn btn-default center-block" data-id="332" data-name="Dalle sup. Kit Nuit" data-price="29,00" data-weight="2100" data-url="/produit/dalle-supplementaire-kit-nuit/">Ajouter au panier</button>
+                        </article>
+
+                        <!-- on met ce champs pour que le JS récupère la quantité. Il n'y en a qu'un seul sur les pages de listing car on ne porpose pas le choix de la quanttité -->
+                        <input type="hidden" id="qt" value="1">
+    		        </section>
+    	        </main>
+            </div> <!-- row !-->
+
+            <hr>
+
+            <footer>
+                <div class="raw">
+					<div class="purchase-infos col-xs-4">
+						<p>
+							<a href="../../informations-achat/index.html#paiement"><span class="glyphicon glyphicon-lock"></span><br>Paiement sécurisé</a>
+						</p>
+					</div>
+
+				    <div class="purchase-infos col-xs-4">
+						<p>
+							<a href="../../informations-achat/index.html#livraison"><span class="glyphicon glyphicon-plane"></span><br>Livraison colissimo internationale</a>
+						</p>
+					</div>
+
+					<div class="purchase-infos col-xs-4">
+						<p>
+							<a href="../../informations-achat/index.html#satisfait"><span class="glyphicon glyphicon-certificate"></span><br>Satisfait ou remboursé</a>
+						</p>
+					</div>
+
+					<p class="text-center">
+						<a href="../../qui-sommes-nous/index.html">Qui sommes nous ?</a> —
+						<a href="../../mentions-legales/index.html">Mentions légales</a> —
+						<a href="../../conditions-generales-de-vente/index.html">Conditions générales de vente</a> —
+						<a href="../../partenaires/index.html">Partenaires</a> — Réalisation <a href="http://buzeo.digital/">Buzeo Digital</a>
+					</p>
+                </div>
+            </footer>
+        </div> <!-- /container -->
+    </body>
+</html>

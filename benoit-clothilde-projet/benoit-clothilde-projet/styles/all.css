@@ -1,0 +1,39 @@
+/*! `Custom` Bootstrap 5 theme */@import url(https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css);@import url(https://fonts.googleapis.com/css?family=Oleo+Script:200,300,400,700);/*!
+ * Bootstrap v5.0.1 (https://getbootstrap.com/)
+ * Copyright 2011-2021 The Bootstrap Authors
+ * Copyright 2011-2021 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */:root{
+     --bs-blue: #0d6efd;
+     --bs-indigo: #6610f2;
+     --bs-purple: #6f42c1;
+     --bs-pink: #d63384;
+     --bs-red: #dc3545;
+     --bs-orange: #fd7e14;
+     --bs-yellow: #ffc107;
+     --bs-green: #198754;
+     --bs-teal: #20c997;
+     --bs-cyan: #0dcaf0;
+     --bs-white: #fff;
+     --bs-gray: #6c757d;
+     --bs-gray-dark: #343a40;
+     --bs-primary: #B58900;
+     --bs-secondary: #303030;
+     --bs-success: #015668;
+     --bs-info: #0F81C7;
+     --bs-warning: #0DE2EA;
+     --bs-danger: #FF304F;
+     --bs-light: #e8e8e8;
+     --bs-dark: #000;
+     --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+     --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+     --bs-gradient: linear-gradient(180deg, rgba(255,255,255,0.15), rgba(255,255,255,0))
+    }
+     
+     *,*::before,
+    
+     *::after{
+         box-sizing:border-box
+        }
+         
+    

@@ -1,0 +1,26 @@
+Benoit clothilde
+
+Le fichier all.css m'a juste aidé à changer les couleurs "primary", au final je n'en ai pas eu besoin
+
+J'ai utilisé des sélecteurs css de classe (.table-bordered .clearfix ...) et de balise (h2 p ...).
+
+Je n'ai pas eu à utiliser du media queries dans mon css, car j'ai beaucoup utilisé bootstrap, j'ai eu peur d'en mettre et que celà décale tout.
+
+
+Un exemple de ce que j'ai testé : 
+@media screen and (max-width: 990px){
+    ....
+}
+
+@media screen and (max-width: 790px){
+    ....
+}
+
+@media screen and (max-width: 580px){
+    ....
+}
+
+Mon "button navbar toggle" est presque transparent lorsque le max-width est inférieur à 990px,
+je n'ai pas réussi à rêgler ce soucis.
+
+J'ai mis un lien pour acheter le jeu!

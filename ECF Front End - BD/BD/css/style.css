@@ -52,43 +52,23 @@ input:focus:invalid {
   color: red;
 }
 
-.cart-item {
+#preview{
   display: flex;
-  align-items: flex-start;
-  padding-bottom: 25px;
-  margin-bottom: 25px;
-  border-bottom: 1px solid #D7D7F9;
-}
-/* .cart-item:last-child {
-  border-bottom: 5px solid #D7D7F9;
-}
-.cart-item img {
-  width: 65px;
-}
-.cart-item .g-price {
-  font-size: 24px;
+  flex-wrap: wrap;
 }
 
-.cart-item-dets {
-  margin-left: 15px;
-  width: 100%;
+body {
+  background-image: url("");
+  background-size: cover;
 }
 
-.cart-item-heading {
-  margin: 10px 0;
+card{
+  display: block;
+  width: 250px;
+    height: 300px;
+    padding: 5px;
+    border: 2px solid #000;
+    margin: auto;
+   
+    border-radius: 10px;
 }
-
-.cart-math-item {
-  margin: 5px 0;
-  font-weight: 700;
-}
-.cart-math-item span {
-  display: inline-block;
-  text-align: right;
-}
-.cart-math-item .cart-math-header {
-  width: 50%;
-}
-.cart-math-item .g-price {
-  width: 40%;
-} */

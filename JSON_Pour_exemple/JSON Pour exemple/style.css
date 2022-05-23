@@ -1,0 +1,30 @@
+html,
+body {
+  background: #ACECA1;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.actor {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 10px;
+  background: #C9F2C7;
+  overflow: hidden;
+  box-shadow: 0 0 30px #629460;
+}
+
+.actor-text {
+  padding: 20px;
+}
+
+.actor-picture {
+  width: 160px;
+}
+
+ol {
+  padding: 0 0 0 17px;
+}
