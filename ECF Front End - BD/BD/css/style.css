@@ -1,7 +1,10 @@
 body {
+  background-image: url("/BD/images/bg6.jpg");
+  background-size: cover;
   font: 1em sans-serif;
   padding: 0;
   margin: 0;
+  
 }
 
 form {
@@ -55,12 +58,10 @@ input:focus:invalid {
 #preview{
   display: flex;
   flex-wrap: wrap;
+ 
 }
 
-body {
-  background-image: url("");
-  background-size: cover;
-}
+
 
 card{
   display: block;
@@ -68,7 +69,9 @@ card{
     height: 300px;
     padding: 5px;
     border: 2px solid #000;
-    margin: auto;
-   
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
     border-radius: 10px;
+    background-color: bisque;
 }
