@@ -20,12 +20,14 @@
             <div class="row">
 
                 <div class="recherche_p">
-                    <form class="form-inline my-2 my-lg-0">
-                        <input type="text" placeholder="Entrez un auteur"
-                            id="in">
-                        <button type="button" onclick="getValue();">recherche par auteur</button> </form>
+                        <input type="text" placeholder="recherche"
+                            id="in" value="">
+                        <button type="button" onclick="getValueAuteur();">recherche
+                            par auteur</button>
+                        <button type="button" onclick="getValueSerie();">recherche
+                            par série</button>
                 </div>
-                
+
                 <!-- <div class="col-sm-4 col-lg-6">
                 <p id="messageId">
                     <label for="id">Id de l'album :</label>
@@ -34,13 +36,10 @@
                 <p>
                     <label for="serie">Série :</label>
                     <input type="text" id="serie" readonly>
-
                     <label for="numero">Album N° :</label>
                     <input type="text" id="numero" readonly>
-
                     <label for="titre">Titre :</label>
                     <input type="text" id="titre" readonly>
-
                     <label for="auteur">Auteur :</label>
                     <input type="search" id="auteur"  readonly>
                 </p>
@@ -54,23 +53,26 @@
                 </div>
             </div>
             <div class="col-sm-8 col-lg-6">
-
                 <img src="images/noComics.jpeg" id="album">
-
             </div>-->
             </div>
             <div id="preview">preview</div>
             <!-- cart shopping-->
-            <div class="screen-cart">
-                <h2>Votre panier</h2>
-
-                <ul class="cart-item">
-                </ul>
-
-                <div class="cart-math">
-                    <p>Article du panier</p>
+            <div class="checkout-container">
+                <div class="table">
+                <span class="empty">Votre panier est vide!</span>
+            
+                <div class="col1-name"></div>
+                <div class="col2-price"></div>
                 </div>
-            </div>
+                <div class="bin"><span>Vider le panier</span><img id="bin" class="add-animation2" src="/BD/images/blue-delete-button-png-29.png" style="width:40px" /></div>
+                <div class="total">
+                  <div class="total-text">Total :</div>
+                  <div class="total-amount">$ 0</div>
+                </div>
+                <div class="checkout" onclick="document.getElementById('id01').style.display='block'">Check out</div>
+                
+              </div>
 
         </div>
         <!-- Optional JavaScript -->

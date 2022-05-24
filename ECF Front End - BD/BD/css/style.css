@@ -4,7 +4,6 @@ body {
   font: 1em sans-serif;
   padding: 0;
   margin: 0;
-  
 }
 
 form {
@@ -61,12 +60,10 @@ input:focus:invalid {
  
 }
 
-
-
 card{
   display: block;
   width: 250px;
-    height: 300px;
+    height: 400px;
     padding: 5px;
     border: 2px solid #000;
     margin-left: auto;
@@ -74,4 +71,154 @@ card{
     margin-bottom: 20px;
     border-radius: 10px;
     background-color: bisque;
+}
+/* ------------check out-------------------------- */
+.checkout-container{
+  background: rgba(255, 255, 255, 0.75);
+  width: 300px;
+  height:500px;
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  text-align:center;
+  z-index:10;
+}
+.table{
+  width:98%;
+  height:200px;
+  overflow-y: scroll;     /* overflow = overflow-x + overflow-y */
+  border:2px solid black;
+  border-radius: 4px;
+  background:white;
+  padding:2%;
+}
+.col1-name{
+  width:70%;
+  height:100%;
+  float:left;
+}
+.col2-price{
+  width:29%;
+  float:left;
+  height:100%;
+}
+.bin{
+  margin-bottom: 5px;
+  margin-top:5px;
+}
+.bin span{
+  width:80%;
+  float:left;
+  text-align:left;
+  padding:10px;
+}
+.bin img{
+  width:10%;
+  float:right;
+  
+}
+.add-animation2{
+  animation: shaker 0.75s;
+  animation-iteration-count: infinite;
+}
+@-o-keyframes shaker {
+  0% {transform: rotate(0deg);}
+  29% {transform: rotate(0deg);}
+  30% {transform: rotate(3deg);}
+  31% {transform: rotate(4deg);}
+  33% {transform: rotate(3deg);}
+  35% {transform: rotate(0deg);}
+  37% {transform: rotate(-3deg);}
+  39% {transform: rotate(-4deg);}
+  41% {transform: rotate(-3deg);}
+  43% {transform: rotate(0deg);}
+  45% {transform: rotate(3deg);}
+  47% {transform: rotate(4deg);}
+  49% {transform: rotate(3deg);}
+  51% {transform: rotate(0deg);}
+  53% {transform: rotate(-3deg);}
+  55% {transform: rotate(-4deg);}
+  57% {transform: rotate(-3deg);}
+  59% {transform: rotate(0deg);}
+  100% {transform: rotate(0deg);}
+}
+@-moz-keyframes shaker {
+  0% {transform: rotate(0deg);}
+  29% {transform: rotate(0deg);}
+  30% {transform: rotate(3deg);}
+  31% {transform: rotate(4deg);}
+  33% {transform: rotate(3deg);}
+  35% {transform: rotate(0deg);}
+  37% {transform: rotate(-3deg);}
+  39% {transform: rotate(-4deg);}
+  41% {transform: rotate(-3deg);}
+  43% {transform: rotate(0deg);}
+  45% {transform: rotate(3deg);}
+  47% {transform: rotate(4deg);}
+  49% {transform: rotate(3deg);}
+  51% {transform: rotate(0deg);}
+  53% {transform: rotate(-3deg);}
+  55% {transform: rotate(-4deg);}
+  57% {transform: rotate(-3deg);}
+  59% {transform: rotate(0deg);}
+  100% {transform: rotate(0deg);}
+}
+@-webkit-keyframes shaker {
+  0% {
+    transform: rotate(0deg);
+  }
+  29% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(3deg);
+  }
+  31% {
+    transform: rotate(4deg);
+  }
+  33% {
+    transform: rotate(3deg);
+  }
+  35% {
+    transform: rotate(0deg);
+  }
+  37% {
+    transform: rotate(-3deg);
+  }
+  39% {
+    transform: rotate(-4deg);
+  }
+  41% {
+    transform: rotate(-3deg);
+  }
+  43% {
+    transform: rotate(0deg);
+  }
+  45% {
+    transform: rotate(3deg);
+  }
+  47% {
+    transform: rotate(4deg);
+  }
+  49% {
+    transform: rotate(3deg);
+  }
+  51% {
+    transform: rotate(0deg);
+  }
+  53% {
+    transform: rotate(-3deg);
+  }
+  55% {
+    transform: rotate(-4deg);
+  }
+  57% {
+    transform: rotate(-3deg);
+  }
+  59% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
