@@ -102,7 +102,6 @@ jQuery(document).ready(function ($) {
 
 
 })
-createDivs();
 
 function mapToObject(Map) {
 	return Object.assign(Object.create(null), ...[...Map].map(v => ({ [v[0]]: v[1] })));
@@ -162,14 +161,15 @@ function getAlbum(num) {
 
 function getValue() {
 	// Sélectionner l'élément input et récupérer sa valeur
-	var input = document.getElementById("in").value;
+	var input = document.getElementById("in").value.toLowerCase(); 
+	//.toLowerCase()
 
 
 	// Dans un premier temps on va aller recupérer l'id de l'auteur selon la saisie utilisateur (qui sera un input)
 
 	var idAuteurToSave = 0;
 	for (var [idAuteur, auteur] of auteurs.entries()) {
-		if (auteur.nom == input) { //remplacer le nom de l'auteur ici par le choix de l'utilisateur
+		if (auteur.nom.toLowerCase() == input) { //remplacer le nom de l'auteur ici par le choix de l'utilisateur
 			//on est sur le bon: on sauvegarde l'id, puis on sort de la boucle
 			console.log("ça marche " + idAuteur)
 			idAuteurToSave = parseInt(idAuteur);
