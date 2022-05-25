@@ -11,11 +11,6 @@ form {
   margin: 0;
   padding: 0 5px;
 }
-
-p>label {
-  display: block;
-}
-
 legend {
   background-color: #000;
   color: #fff;
@@ -57,7 +52,6 @@ input:focus:invalid {
 #preview{
   display: flex;
   flex-wrap: wrap;
- 
 }
 
 card{
@@ -92,7 +86,7 @@ card{
   background:white;
   padding:2%;
 }
-.col1-name{
+/* .col1-name{
   width:70%;
   height:100%;
   float:left;
@@ -101,7 +95,7 @@ card{
   width:29%;
   float:left;
   height:100%;
-}
+} */
 .bin{
   margin-bottom: 5px;
   margin-top:5px;
