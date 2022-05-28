@@ -216,3 +216,20 @@ card{
     transform: rotate(0deg);
   }
 }
+.checkout{
+  width:50%;
+  margin: auto;
+  height:50px;
+  padding-top: .5em;
+  margin-top: 2em;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  border: solid 2px #232323;
+  color: #232323;
+  border-radius: 0.4em;
+  cursor:pointer;  
+  background: white;
+}
+.checkout:hover{
+  animation:none;
+}

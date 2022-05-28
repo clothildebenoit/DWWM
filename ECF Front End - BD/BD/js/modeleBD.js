@@ -67,11 +67,9 @@ jQuery(document).ready(function ($) {
     // imgAlbum.addEventListener("error", function () {
     // 	prbImg(this)
     // });
-
     // imgAlbumMini.addEventListener("error", function () {
     // 	prbImg(this)
     // });
-
     // var id = document.getElementById("id");
     // id.addEventListener("change", function () {
     // 	getAlbum(this)
@@ -102,7 +100,6 @@ function getAlbum(num) {
         afficheAlbums($("#albumMini"), $("#album"), albumDefaultMini, albumDefault);
 
     } else {
-
         var serie = series.get(album.idSerie);
         var auteur = auteurs.get(album.idAuteur);
 
@@ -191,6 +188,7 @@ function getValueAuteur() {
     // 	else element.src = albumDefault;
     // }
 }
+
 function addToPanier(idAlbumToAdd) {
     console.log(idAlbumToAdd);
     console.log('card' + idAlbumToAdd);
@@ -201,8 +199,6 @@ function addToPanier(idAlbumToAdd) {
             break;
         }
     }
-
-
 
     var panier = document.getElementsByClassName("table")[0]
 
@@ -216,6 +212,16 @@ function addToPanier(idAlbumToAdd) {
     panier.appendChild(ligne);
 
 }
+
+// //......cacher "le panier vide"
+// const unArticleDansLePanier = function(){
+//     if(table.length > 0)
+// }else{
+//     document.getElementsByClassName('empty').classlist.add('hidden');
+// }
+
+
+
 function getValueSerie() {
     // Sélectionner l'élément input et récupérer sa valeur
     input = document.getElementById("in").value.toLowerCase();
