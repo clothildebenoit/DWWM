@@ -9,23 +9,31 @@
             href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
             integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
             crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="css/style.css">
         <title>Les BD</title>
     </head>
 
     <body>
         <div class="container">
+            <!-- <div class="container">
+                <div class="icon">---</div>
+                <div class="temp">-°C</div>
+                <div class="summary">----</div>
+                <div class="location"></div>
+              </div> -->
             <h1>Liste des BD</h1>
 
             <div class="row">
 
                 <div class="recherche_p">
-                        <input type="text" placeholder="recherche"
-                            id="in" value="">
-                        <button type="button" onclick="getValueAuteur();">recherche
-                            par auteur</button>
-                        <button type="button" onclick="getValueSerie();">recherche
-                            par série</button>
+                    <input type="text" placeholder="recherche"
+                        id="in" value="">
+                    <button type="button" onclick="getValueAuteur();">recherche
+                        par auteur</button>
+                    <button type="button" onclick="getValueSerie();">recherche
+                        par série</button>
                 </div>
 
                 <!-- <div class="col-sm-4 col-lg-6">
@@ -56,26 +64,61 @@
                 <img src="images/noComics.jpeg" id="album">
             </div>-->
             </div>
-            <div id="preview">preview</div>
-            
-            <!-- cart shopping-->
+            <div id="preview"></div>
+
+            <!-- panier-->
             <div class="checkout-container">
                 <div class="table">
-                <span class="empty">Votre panier est vide!</span>
-            
-                <div class="col1-img"></div>
-                <div class="col2-title"></div>
-                <div class="col3-price"></div>
-                </div>
-                <div class="bin"><span>Vider le panier</span><img id="bin" class="add-animation2" src="/BD/images/blue-delete-button-png-29.png" style="width:40px" /></div>
-                <div class="total">
-                  <div class="total-text">Total :</div>
-                  <div class="total-amount">$ 0</div>
-                </div>
-                <div class="checkout" onclick="document.getElementById('id01').style.display='block'">Paiement</div>
-                
-              </div>
+                    <span class="empty">Votre panier est vide!</span>
 
+                    <div class="col1-img"></div>
+                    <div class="col2-title"></div>
+                    <div class="col3-price"></div>
+                </div>
+                <div class="bin"><span>Vider le panier</span><img id="bin"
+                        class="add-animation2"
+                        src="/BD/images/blue-delete-button-png-29.png"
+                        style="width:40px" /></div>
+                <div class="total">
+                    <div class="total-text">Total :</div>
+                    <div class="total-amount">0 € </div>
+                </div>
+                <div class="checkout"
+                    onclick="document.getElementById('id01').style.display='block'">Paiement</div>
+            </div>
+         <!-- ----------------modal paiement------------- -->
+         <div id="id01" class="modal">
+            <div class="wrapper">
+              <div class="bill-content">
+              <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close">&times;</span>
+              <h1 class="box-title"> Formulaire de paiement</h1>
+              <div class="price-total">
+                <div class="pay-last">0 €</div>
+              </div>
+              <form>
+                
+                <div class="form-text">
+                  <label>Numéro de carte</label>
+                  <input name="card-number" type="text" required>
+                </div>
+                <div class="form-text">
+                  <label>Crypto</label>
+                  <input name="name" type="text" placeholder="CVV" required>
+                </div>
+                <div class="form-text" id="col01">
+                  <label>Date d'expiration</label>
+                  <input name="card-number" type="text" placeholder="MM/YY" maxlength="3" required>
+                </div>
+                <div class="form-text"  id="col02">
+                  <label>Code promo</label>
+                  <input name="card-number" type="text">
+                </div>
+                
+                <button id="end">Payer maintenant</button>
+              </form>
+              </div>
+            </div>
+           </div> 
         </div>
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->

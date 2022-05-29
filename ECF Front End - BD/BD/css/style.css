@@ -1,7 +1,7 @@
 body {
   background-image: url("/BD/images/bg6.jpg");
-  background-size: cover;
-  font: 1em sans-serif;
+  /* background-size: cover; */
+  font-family: "Comic Sans MS", cursive, sans-serif;
   padding: 0;
   margin: 0;
 }
@@ -11,6 +11,7 @@ form {
   margin: 0;
   padding: 0 5px;
 }
+
 legend {
   background-color: #000;
   color: #fff;
@@ -49,43 +50,94 @@ input:focus:invalid {
   color: red;
 }
 
-#preview{
+#preview {
   display: flex;
   flex-wrap: wrap;
 }
 
-card{
+card {
   display: block;
-  width: 250px;
-    height: 400px;
-    padding: 5px;
+  width: 500px;
+  height: 400px;
+  /* padding: 5px;
     border: 2px solid #000;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
     border-radius: 10px;
-    background-color: bisque;
+    background-color: bisque; */
+  position: relative;
+  padding: 30px 70px;
+  margin: 1em auto 60px;
+  border: 10px solid #c81e2b;
+  background: rgb(248, 242, 242);
+  border-radius: 200px 140px;
+  -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+button{
+  padding: 0%;
+  margin-left: 30px;
+  border-radius: 20px 20px 20px 0px;
+  border: 5px solid orange;
+}
+card:before {
+  content: "";
+  position: absolute;
+  z-index: 10;
+  bottom: -40px;
+  right: 100px;
+  width: 50px;
+  height: 50px;
+  border: 10px solid #c81e2b;
+  background: #fff;
+  /* -webkit-border-bottom-right-radius: 50px;
+  -moz-border-radius-bottomright:50px; */
+  border-radius: 50px;
+  display: block;
+}
+
+card:after {
+  content: "";
+  position: absolute;
+  z-index: 10;
+  bottom: -50px;
+  right: 50px;
+  width: 25px;
+  height: 25px;
+  border: 10px solid #c81e2b;
+  background: #fff;
+  /* -webkit-border-radius: 25px;
+  -moz-border-radius: 25px; */
+  border-radius: 25px;
+  display: block;
+}
+.titre{
+  text-align: center;
 }
 /* ------------check out-------------------------- */
-.checkout-container{
+.checkout-container {
   background: rgba(255, 255, 255, 0.75);
   width: 300px;
-  height:500px;
+  height: 500px;
   position: fixed;
   right: 0px;
   bottom: 0px;
-  text-align:center;
-  z-index:10;
+  text-align: center;
+  z-index: 10;
 }
-.table{
-  width:98%;
-  height:200px;
-  overflow-y: scroll;     /* overflow = overflow-x + overflow-y */
-  border:2px solid black;
+
+.table {
+  width: 98%;
+  height: 200px;
+  overflow-y: scroll;
+  /* overflow = overflow-x + overflow-y */
+  border: 2px solid black;
   border-radius: 4px;
-  background:white;
-  padding:2%;
+  background: white;
+  padding: 2%;
 }
+
 /* .col1-name{
   width:70%;
   height:100%;
@@ -96,130 +148,267 @@ card{
   float:left;
   height:100%;
 } */
-.bin{
+.bin {
   margin-bottom: 5px;
-  margin-top:5px;
+  margin-top: 5px;
 }
-.bin span{
-  width:80%;
-  float:left;
-  text-align:left;
-  padding:10px;
+
+.bin span {
+  width: 80%;
+  float: left;
+  text-align: left;
+  padding: 10px;
 }
-.bin img{
-  width:10%;
-  float:right;
-  
+
+.bin img {
+  width: 10%;
+  float: right;
+
 }
-.add-animation2{
+
+.add-animation2 {
   animation: shaker 0.75s;
   animation-iteration-count: infinite;
 }
+/* différente version keyframes pour différent navigateur */
 @-o-keyframes shaker {
-  0% {transform: rotate(0deg);}
-  29% {transform: rotate(0deg);}
-  30% {transform: rotate(3deg);}
-  31% {transform: rotate(4deg);}
-  33% {transform: rotate(3deg);}
-  35% {transform: rotate(0deg);}
-  37% {transform: rotate(-3deg);}
-  39% {transform: rotate(-4deg);}
-  41% {transform: rotate(-3deg);}
-  43% {transform: rotate(0deg);}
-  45% {transform: rotate(3deg);}
-  47% {transform: rotate(4deg);}
-  49% {transform: rotate(3deg);}
-  51% {transform: rotate(0deg);}
-  53% {transform: rotate(-3deg);}
-  55% {transform: rotate(-4deg);}
-  57% {transform: rotate(-3deg);}
-  59% {transform: rotate(0deg);}
-  100% {transform: rotate(0deg);}
-}
-@-moz-keyframes shaker {
-  0% {transform: rotate(0deg);}
-  29% {transform: rotate(0deg);}
-  30% {transform: rotate(3deg);}
-  31% {transform: rotate(4deg);}
-  33% {transform: rotate(3deg);}
-  35% {transform: rotate(0deg);}
-  37% {transform: rotate(-3deg);}
-  39% {transform: rotate(-4deg);}
-  41% {transform: rotate(-3deg);}
-  43% {transform: rotate(0deg);}
-  45% {transform: rotate(3deg);}
-  47% {transform: rotate(4deg);}
-  49% {transform: rotate(3deg);}
-  51% {transform: rotate(0deg);}
-  53% {transform: rotate(-3deg);}
-  55% {transform: rotate(-4deg);}
-  57% {transform: rotate(-3deg);}
-  59% {transform: rotate(0deg);}
-  100% {transform: rotate(0deg);}
-}
-@-webkit-keyframes shaker {
   0% {
     transform: rotate(0deg);
   }
+
   29% {
     transform: rotate(0deg);
   }
+
   30% {
     transform: rotate(3deg);
   }
+
   31% {
     transform: rotate(4deg);
   }
+
   33% {
     transform: rotate(3deg);
   }
+
   35% {
     transform: rotate(0deg);
   }
+
   37% {
     transform: rotate(-3deg);
   }
+
   39% {
     transform: rotate(-4deg);
   }
+
   41% {
     transform: rotate(-3deg);
   }
+
   43% {
     transform: rotate(0deg);
   }
+
   45% {
     transform: rotate(3deg);
   }
+
   47% {
     transform: rotate(4deg);
   }
+
   49% {
     transform: rotate(3deg);
   }
+
   51% {
     transform: rotate(0deg);
   }
+
   53% {
     transform: rotate(-3deg);
   }
+
   55% {
     transform: rotate(-4deg);
   }
+
   57% {
     transform: rotate(-3deg);
   }
+
   59% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(0deg);
   }
 }
-.checkout{
-  width:50%;
+
+@-moz-keyframes shaker {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  29% {
+    transform: rotate(0deg);
+  }
+
+  30% {
+    transform: rotate(3deg);
+  }
+
+  31% {
+    transform: rotate(4deg);
+  }
+
+  33% {
+    transform: rotate(3deg);
+  }
+
+  35% {
+    transform: rotate(0deg);
+  }
+
+  37% {
+    transform: rotate(-3deg);
+  }
+
+  39% {
+    transform: rotate(-4deg);
+  }
+
+  41% {
+    transform: rotate(-3deg);
+  }
+
+  43% {
+    transform: rotate(0deg);
+  }
+
+  45% {
+    transform: rotate(3deg);
+  }
+
+  47% {
+    transform: rotate(4deg);
+  }
+
+  49% {
+    transform: rotate(3deg);
+  }
+
+  51% {
+    transform: rotate(0deg);
+  }
+
+  53% {
+    transform: rotate(-3deg);
+  }
+
+  55% {
+    transform: rotate(-4deg);
+  }
+
+  57% {
+    transform: rotate(-3deg);
+  }
+
+  59% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes shaker {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  29% {
+    transform: rotate(0deg);
+  }
+
+  30% {
+    transform: rotate(3deg);
+  }
+
+  31% {
+    transform: rotate(4deg);
+  }
+
+  33% {
+    transform: rotate(3deg);
+  }
+
+  35% {
+    transform: rotate(0deg);
+  }
+
+  37% {
+    transform: rotate(-3deg);
+  }
+
+  39% {
+    transform: rotate(-4deg);
+  }
+
+  41% {
+    transform: rotate(-3deg);
+  }
+
+  43% {
+    transform: rotate(0deg);
+  }
+
+  45% {
+    transform: rotate(3deg);
+  }
+
+  47% {
+    transform: rotate(4deg);
+  }
+
+  49% {
+    transform: rotate(3deg);
+  }
+
+  51% {
+    transform: rotate(0deg);
+  }
+
+  53% {
+    transform: rotate(-3deg);
+  }
+
+  55% {
+    transform: rotate(-4deg);
+  }
+
+  57% {
+    transform: rotate(-3deg);
+  }
+
+  59% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.checkout {
+  width: 50%;
   margin: auto;
-  height:50px;
+  height: 50px;
   padding-top: .5em;
   margin-top: 2em;
   font-size: 1.5em;
@@ -227,9 +416,31 @@ card{
   border: solid 2px #232323;
   color: #232323;
   border-radius: 0.4em;
-  cursor:pointer;  
+  cursor: pointer;
   background: white;
 }
-.checkout:hover{
-  animation:none;
+
+.checkout:hover {
+  animation: none;
+}
+
+.modal{
+  display:none;
+  position:fixed;
+  z-index: 99;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  background-color: rgba(0,0,0,0.4);
+  
+}
+.wrapper{
+  background-color: white;
+  width:50%;
+  box-shadow: 10px 10px 0 black; 
+  border-bottom: 1px solid white;
+  margin: 1% auto 2% auto;
+  animation: animatezoom .6s;
+  -webkit-animation: animatezoom .6s;
 }

@@ -12,12 +12,14 @@ var txtPrix = document.getElementById("prix");
 var imgAlbum = document.getElementById("album");
 var imgAlbumMini = document.getElementById("albumMini");
 var preview = document.getElementById("preview");
+
 /**
      * Affichage de l'image par défaut si le chargement de l'image de l'album
      * ne s'est pas bien passé
      * 
      * @param {object HTML} element ;
      */
+
 function prbImg(element) {
     // console.log(element);
     if (element.id === "albumMini")
@@ -33,6 +35,7 @@ function prbImg(element) {
 * @param {string} nomFic 
 * @param {string} nomFicBig 
 */
+
 function afficheAlbums($albumMini, $album, nomFicMini, nomFic) {
     $album.stop(true, true).clearQueue().fadeOut(100, function () {
         $album.attr('src', nomFic);
@@ -48,38 +51,11 @@ function afficheAlbums($albumMini, $album, nomFicMini, nomFic) {
 //    fonction au chargement de la page
 jQuery(document).ready(function ($) {
 
-    // console.log("Liste des albums");
-    // albums.forEach(album => {
-    //     serie = series.get(album.idSerie);
-    //     auteur = auteurs.get(album.idAuteur);
-    //     console.log(album.titre + " N°" + album.numero + " Série:" + serie.nom + " Auteur:" + auteur.nom);
-    // });
-
-    // // Lecture d'un album
-    // console.log("Lecture d'un album");
-    // var album = albums.get("6");
-    // var serie = series.get(album.idSerie);
-    // var auteur = auteurs.get(album.idAuteur);
-    // console.log(album.titre+" "+serie.nom+" "+auteur.nom);
-
-    // Affichage des BD
-
-    // imgAlbum.addEventListener("error", function () {
-    // 	prbImg(this)
-    // });
-    // imgAlbumMini.addEventListener("error", function () {
-    // 	prbImg(this)
-    // });
-    // var id = document.getElementById("id");
-    // id.addEventListener("change", function () {
-    // 	getAlbum(this)
-    // });
 })
 
 function mapToObject(Map) {
     return Object.assign(Object.create(null), ...[...Map].map(v => ({ [v[0]]: v[1] })));
 }
-// console.log(mapToObject(auteurs));
 
 // /**
 //  * Récupération de l'album par son id et appel de 
@@ -124,7 +100,7 @@ function getAlbum(num) {
     }
 }
 
-//on fait une recherche sur la map des albums: 
+//Tri par auteur: 
 function getValueAuteur() {
     // Sélectionner l'élément input et récupérer sa valeur
     var input = document.getElementById("in").value.toLowerCase();
@@ -164,12 +140,12 @@ function getValueAuteur() {
                 nomFic = nomFic.replace(/'|!|\?|\.|"|:|\$/g, "");
 
                 card.innerHTML =
-                    '<h2>' + album.titre + '</h2>' +
-                    '<span>' + " N°" + album.numero + '</span>' +
+                    '<section class="titre"><h2><strong>' + album.titre + '</strong></h2>' +
                     '<span>' + " Série:" + serie.nom + '</span>' +
-                    '<h4>' + " Auteur:" + auteur.nom + '</h4>' +
-                    '<img src="' + srcAlbumMini + nomFic + '.jpg"></img>' +
-                    '<p>' + " Prix : " + album.prix + '</p>'
+                    '<span>' + " N°" + album.numero + '</span>' +
+                    '<h5>' + auteur.nom + '</h5>' +
+                    '<p>' + album.prix + "€" + '</p></section>' +
+                    '<img src="' + srcAlbumMini + nomFic + '.jpg"></img>'
 
                 card.appendChild(button);
                 preview.appendChild(card);
@@ -177,18 +153,9 @@ function getValueAuteur() {
             }
         }
     }
-    // /**
-    //  * Affichage de l'image par défaut si le chargement de l'image de l'album
-    //  * ne s'est pas bien passé
-    //  * @param {object HTML} element 
-    // function prbImg(element) {
-    // 	// console.log(element);
-    // 	if (element.id === "albumMini")
-    // 		element.src = albumDefaultMini;
-    // 	else element.src = albumDefault;
-    // }
 }
 
+//Ajout au panier
 function addToPanier(idAlbumToAdd) {
     console.log(idAlbumToAdd);
     console.log('card' + idAlbumToAdd);
@@ -206,22 +173,81 @@ function addToPanier(idAlbumToAdd) {
     var nomFic = serie.nom + "-" + album.numero + "-" + album.titre;
 
     ligne.innerHTML =
-        albumToAdd.titre+
+        albumToAdd.titre +
         // '<img src="' + srcAlbumMini + nomFic + '.jpg"></img>' +
-                    '<p>' + " Prix : " + album.prix + '</p>'
+        '<p>' + " Prix : " + album.prix + '</p>'
     panier.appendChild(ligne);
+
+
+    // var txt3 = document.createElement("hr");
+    // var txt4 = document.createElement("hr");
+    // $('.col1-name').append(album.titre,txt3);
+    // $('.col2-price').append(album.prix,txt4);
 
 }
 
-// //......cacher "le panier vide"
-// const unArticleDansLePanier = function(){
-//     if(table.length > 0)
-// }else{
-//     document.getElementsByClassName('empty').classlist.add('hidden');
-// }
+/*......cacher "le panier vide"
+------------------------------------
+const unArticleDansLePanier = function () {
+     if (table.length >= 1)
+         document.getElementsByClassName('empty').classlist.add('hidden');
+     }
+ $(document).on('click', 'btn' + idAlbum.toString()
+     + '', function (e) {
+         e.preventDefault();
+         $('.empty').hide();*/
 
 
+ /*........Le total
+ ----------------------
+ let subtotal = 0;
+const calculateTax = subtotal => {
+  const tax = subtotal * 0.13;
+  const formattedTax = tax.toFixed(2);
+  return formattedTax;
+};
+const calculateTotal = subtotal => {
+  const tax = calculateTax(subtotal);
+  const total = parseFloat(subtotal) + parseFloat(tax);
+  const formattedTotal = total.toFixed(2);
+  return formattedTotal;
+};
 
+-----ou-----
+function updateCartTotal(){
+    //init
+    var total = 0;
+    var price = 0;
+    var items = 0;
+    var productname = "";
+    var carttable = "";
+    if(sessionStorage.getItem('cart')) {
+        //get cart data & parse to array
+        var cart = JSON.parse(sessionStorage.getItem('cart'));
+        //get no of items in cart 
+        items = cart.length;
+        //loop over cart array
+        for (var i = 0; i < items; i++){
+            //convert each JSON product in array back into object
+            var x = JSON.parse(cart[i]);
+            //get property value of price
+            price = parseFloat(x.price.split('$')[1]);
+            productname = x.productname;
+            //add price to total
+            carttable += "<tr><td>" + productname + "</td><td>$" + price.toFixed(2) + "</td></tr>";
+            total += price;
+        } 
+    }
+    //update total on website HTML
+    document.getElementById("total").innerHTML = total.toFixed(2);
+    //insert saved products to cart table
+    document.getElementById("carttable").innerHTML = carttable;
+    //update items in cart on website HTML
+    document.getElementById("itemsquantity").innerHTML = items;
+}
+*/
+
+//Tri par série
 function getValueSerie() {
     // Sélectionner l'élément input et récupérer sa valeur
     input = document.getElementById("in").value.toLowerCase();
@@ -254,19 +280,69 @@ function getValueSerie() {
                 card.setAttribute("id", "card" + idAlbum.toString());
                 var nomFic = serie.nom + "-" + album.numero + "-" + album.titre;
 
+                var button = document.createElement("button");
+                button.innerHTML = '<btn id="btn' + idAlbum.toString()
+                    + '" class="add-to-cart" onclick="addToPanier(' + idAlbum.toString() + ')">Ajouter au panier</btn>';
+
                 // Utilisation d'une expression régulière pour supprimer 
                 // les caractères non autorisés dans les noms de fichiers : '!?.":$
                 nomFic = nomFic.replace(/'|!|\?|\.|"|:|\$/g, "");
 
                 card.innerHTML =
-                    '<h1>' + album.titre + '</h1>' +
-                    '<span>' + " N°" + album.numero + '</span>' +
+                    '<section class="titre"><h2><strong>' + album.titre + '</strong></h2>' +
                     '<span>' + " Série:" + serie.nom + '</span>' +
-                    '<h2>' + " Auteur:" + auteur.nom + '</h2>';
+                    '<span>' + " N°" + album.numero + '</span>' +
+                    '<h5>' + auteur.nom + '</h5>' +
+                    '<p>' + album.prix + "€" + '</p></section>' +
+                    '<img src="' + srcAlbumMini + nomFic + '.jpg"></img>'
 
+                card.appendChild(button);
                 preview.appendChild(card);
                 console.log(album.titre + " N°" + album.numero + " Série:" + serie.nom + " Auteur:" + auteur.nom);
             }
         }
     }
 }
+
+
+//Api météo
+// let lon;
+// let lat;
+// let temperature = document.querySelector(".temp");
+// let summary = document.querySelector(".summary");
+// let loc = document.querySelector(".location");
+// let icon = document.querySelector(".icon");
+// const kelvin = 273;
+  
+// window.addEventListener("load", () => {
+//   if (navigator.geolocation) {
+//     navigator.geolocation.getCurrentPosition((position) => {
+//       console.log(position);
+//       lon = position.coords.longitude;
+//       lat = position.coords.latitude;
+  
+//       // API ID
+//       const api = "bacd34aeef6ebeeeb8ea81b02b577288";
+  
+//       // API URL
+//       const base =
+//       https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={bacd34aeef6ebeeeb8ea81b02b577288}
+  
+//       // Calling the API
+//       fetch(base)
+//         .then((response) => {
+//           return response.json();
+//         })
+//         .then((data) => {
+//           console.log(data);
+//           temperature.textContent = 
+//               Math.floor(data.main.temp - kelvin) + "°C";
+//           summary.textContent = data.weather[0].description;
+//           loc.textContent = data.name + "," + data.sys.country;
+//           let icon1 = data.weather[0].icon;
+//           icon.innerHTML = 
+//               `<img src="icons/${icon1}.svg" style= 'height:10rem'/>`;
+//         });
+//     });
+//   }
+// });
