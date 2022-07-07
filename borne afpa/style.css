@@ -1,0 +1,24 @@
+h1{
+text-align: center;
+font-size: 2em;
+}
+
+.col-6{
+    
+border: 5px solid #87bb34;
+border-radius: 30px 30px 30px 30px;
+padding: 40px;
+text-align: center;
+}
+
+.btn{
+    background-color: #87bb34;
+    border: solid #9fd34c;
+}
+.navbar {
+    background-color: #87bb34;
+    font-size: 2em;
+    padding: 30px 30px;
+    margin: 12px;
+    
+}
