@@ -1,0 +1,42 @@
+{
+    "nom": "Chez Antonio",
+    "Slogan": "Le bon gout de l'Italie!",
+    "pizzas":[
+        {
+            "nomPizza": "Formaggio",
+            "prix": 12,
+            "image": "https://i.f1g.fr/media/cms/720x990_cropupscale/2022/02/07/e71c70b6d46064775595473d2640c890b153690d406390f92b9be60cc8bdf687.jpg",
+            "garniture": [
+                    "base tomate",
+                    "mozzarella",
+                    "gorgonzola",
+                    "scarmoza fumée",
+                    "fromage de chèvre"
+            ]
+        },
+        {
+            "nomPizza": "Vesuvia",
+            "prix": 14,
+            "image": "https://i1.wp.com/www.labanque-nantes.com/wp-content/uploads/2021/08/Pizza-la-Vesuvio-LA-BANQUE.jpg?fit=4096%2C2735&ssl=1",
+            "garniture":[
+                "base tomate",
+                "mozzarella",
+                "peperoni",
+                "nduja",
+                "oignon"
+            ]
+        },
+        {
+            "nomPizza":"Reina",
+            "prix": 12,
+            "image": "https://img.cuisineaz.com/660x660/2016/04/28/i96018-pizza-reine.webp",
+            "garniture":[
+                "base tomate",
+                "jambon",
+                "mozzarella",
+                "champignons"
+            ]
+        }
+    ]
+}
+
